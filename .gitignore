@@ -1,0 +1,19 @@
+# Large video files (>100MB exceeds GitHub 100MB limit)
+*.MOV
+*.mov
+
+# Operating System Files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Build Outputs
+dist/
+build/
+.cache/
