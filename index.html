@@ -166,9 +166,18 @@ td.dash{color:var(--muted)}
 /* team */
 .team{display:grid;grid-template-columns:1fr;gap:28px}
 @media (min-width:900px){.team{grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:56px}}
-.photo{position:relative;aspect-ratio:4/3;border-radius:12px;background:var(--panel);border:1px solid var(--line);overflow:hidden;display:grid;place-items:center;color:var(--muted);font-size:.9rem}
-.photo canvas{position:absolute;inset:0;width:100%;height:100%}
-.photo span{position:relative;background:var(--panel);padding:6px 12px;border-radius:999px;border:1px solid var(--line)}
+.photo{position:relative;aspect-ratio:4/4.6;max-height:480px;border-radius:16px;background:var(--panel);border:1px solid var(--line);overflow:hidden;color:var(--muted);box-shadow:0 14px 38px -10px rgba(0,0,0,0.22);display:block}
+.photo-img{width:100%;height:100%;object-fit:cover;object-position:center 16%;display:block;transition:transform .6s cubic-bezier(.16,1,.3,1),filter .6s ease;filter:contrast(1.02) saturate(1.04)}
+.photo:hover .photo-img{transform:scale(1.03)}
+.photo canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:.55;mix-blend-mode:screen;z-index:1}
+.photo-glow{position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 50% 12%,rgba(47,75,255,0.18) 0%,transparent 65%),linear-gradient(to top,var(--panel) 0%,rgba(23,23,26,0.55) 28%,transparent 60%),linear-gradient(to right,rgba(23,23,26,0.3) 0%,transparent 14%,transparent 86%,rgba(23,23,26,0.3) 100%);z-index:2}
+.photo-badge{position:absolute;bottom:14px;left:14px;right:14px;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 14px;background:color-mix(in srgb,var(--panel) 82%,transparent);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border:1px solid var(--line);border-radius:12px;z-index:3}
+.photo-badge-left{display:flex;align-items:center;gap:10px;min-width:0}
+.photo-badge-logo{width:28px;height:28px;border-radius:6px;object-fit:contain;background:rgba(255,255,255,.08);padding:2px;flex:none}
+.photo-badge-text{min-width:0}
+.photo-badge-text b{display:block;font:700 .85rem/1.2 var(--display);color:var(--ink);letter-spacing:.02em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.photo-badge-text span{font-size:.74rem;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block}
+.photo-badge-tag{font:700 .72rem/1 var(--body);background:var(--accent);color:#fff;padding:6px 10px;border-radius:999px;letter-spacing:.02em;flex:none}
 .founder h3{font-size:1.4rem;margin-top:20px}
 .founder p{margin:10px 0 0;max-width:52ch}
 .facts{display:flex;flex-wrap:wrap;gap:12px 32px;margin:20px 0 0;padding:0;list-style:none}
@@ -420,7 +429,21 @@ details p{margin:0 0 22px;max-width:64ch}
     </div>
     <div class="team">
       <div class="founder">
-        <div class="photo"><canvas id="teamNet" aria-hidden="true"></canvas><span>Founder photo goes here</span></div>
+        <div class="photo">
+          <img src="founder.jpg" alt="GEN-NETZ Founder" class="photo-img" width="768" height="1024" loading="eager">
+          <canvas id="teamNet" aria-hidden="true"></canvas>
+          <div class="photo-glow" aria-hidden="true"></div>
+          <div class="photo-badge">
+            <div class="photo-badge-left">
+              <img src="LOGO.PNG" alt="GEN-NETZ" class="photo-badge-logo" width="28" height="28">
+              <div class="photo-badge-text">
+                <b>GEN-NETZ</b>
+                <span>Founder & Creative Lead</span>
+              </div>
+            </div>
+            <span class="photo-badge-tag">1L+ Community</span>
+          </div>
+        </div>
         <h3>Founder</h3>
         <p>Years of hands-on experience as a creator, and an audience of more than 1L followers built across Instagram, Facebook and YouTube.</p>
         <ul class="facts">
@@ -428,15 +451,30 @@ details p{margin:0 0 22px;max-width:64ch}
           <li><b>Years</b>of experience</li>
         </ul>
         <div class="chips">
-          <a class="chip" href="#" target="_blank" rel="noopener">Founder on Instagram</a>
-          <a class="chip" href="#" target="_blank" rel="noopener">Founder on Facebook</a>
-          <a class="chip" href="#" target="_blank" rel="noopener">Founder on YouTube</a>
+          <a class="chip" href="https://www.instagram.com/gen_netz" target="_blank" rel="noopener">Founder on Instagram</a>
+          <a class="chip" href="https://www.facebook.com/profile.php?id=61591679835416" target="_blank" rel="noopener">Founder on Facebook</a>
+          <a class="chip" href="https://www.youtube.com/@GENNETZ" target="_blank" rel="noopener">Founder on YouTube</a>
         </div>
       </div>
       <div class="roles">
-        <div class="role"><span class="av" data-logo></span><div><h3>Professional editor</h3><p>Cuts your reels and stories and prepares captions and covers.</p><em>Name to be added</em></div></div>
-        <div class="role"><span class="av" data-logo></span><div><h3>Camera operator</h3><p>Runs the shoot on planned visits and on location.</p><em>Name to be added</em></div></div>
-        <div class="role"><span class="av" data-logo></span><div><h3>Content writer</h3><p>Writes captions, hooks and scripts in your brand's voice.</p><em>Name to be added</em></div></div>
+        <div class="role">
+          <span class="av">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M7 3v18"/><path d="M3 7.5h4"/><path d="M3 12h18"/><path d="M3 16.5h4"/><path d="M17 3v18"/><path d="M17 7.5h4"/><path d="M17 16.5h4"/></svg>
+          </span>
+          <div><h3>Professional editor</h3><p>Cuts your reels and stories and prepares captions and covers.</p><em>Name to be added</em></div>
+        </div>
+        <div class="role">
+          <span class="av">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg>
+          </span>
+          <div><h3>Camera operator</h3><p>Runs the shoot on planned visits and on location.</p><em>Name to be added</em></div>
+        </div>
+        <div class="role">
+          <span class="av">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+          </span>
+          <div><h3>Content writer</h3><p>Writes captions, hooks and scripts in your brand's voice.</p><em>Name to be added</em></div>
+        </div>
       </div>
     </div>
   </div>
