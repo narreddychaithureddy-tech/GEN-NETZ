@@ -124,11 +124,12 @@ h2{font-size:clamp(1.6rem,4.2vw,2.6rem);line-height:1.12;letter-spacing:-.02em;m
 .plan .vol{list-style:none;padding:0;margin:18px 0 0;border-top:1px solid var(--line)}
 .plan .vol li{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid var(--line);font-size:.95rem}
 .plan .vol b{color:var(--ink);font-weight:700;text-align:right}
-.creator-pricing{margin:18px 0 4px}
-.creator-pricing .price-sub{display:block;font-size:.82rem;font-weight:600;color:var(--muted);letter-spacing:.01em}
-.creator-pricing .price-headline{font-family:var(--display);font-size:1.85rem;font-weight:800;color:var(--ink);line-height:1.15;letter-spacing:-.02em;margin-top:2px}
-.creator-services li{align-items:center}
-.service-name-wrap small{display:block;font-size:.76rem;color:var(--muted);font-weight:500;line-height:1.3;margin-top:2px}
+.creator-pricing{margin:22px 0 14px}
+.creator-pricing .price-sub{display:block;font-size:.72rem;font-weight:700;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+.creator-pricing .price-hero{display:flex;flex-direction:column;gap:1px;margin-top:6px}
+.creator-pricing .price-title{font-family:var(--display);font-size:1.85rem;font-weight:800;color:var(--ink);line-height:1.05;letter-spacing:-.01em;text-transform:uppercase}
+.creator-pricing .price-amount{font-family:var(--display);font-size:2.85rem;font-weight:800;color:var(--accent);line-height:1;letter-spacing:-.02em}
+.creator-desc{margin:16px 0 0;font-size:.92rem;line-height:1.55;color:var(--text)}
 .plan .fee{margin:18px 0 20px;font-weight:700;color:var(--ink)}
 .plan .btn{margin-top:auto}
 .plan.rec{background:var(--inv-bg);color:var(--inv-text);border-color:var(--inv-bg)}
@@ -344,15 +345,15 @@ details p{margin:0 0 22px;max-width:64ch}
     </div>
     <div class="plans">
       <article class="plan">
-        <h3>Elite</h3>
-        <p class="kind">Complete Instagram management</p>
-        <p class="for">GEN-NETZ takes primary responsibility for your Instagram content and management.</p>
-        <ul class="vol"><li>Reels <b>10 / month</b></li><li>Posts <b>4–6 / month</b></li><li>Stories <b>10–12 / month</b></li></ul>
+        <h3>Flex</h3>
+        <p class="kind">Flexible management</p>
+        <p class="for">Consistent management with lighter content production.</p>
+        <ul class="vol"><li>Reels <b>5 / month</b></li><li>Posts <b>2–3 / month</b></li><li>Stories <b>11–12 / week</b></li></ul>
         <p class="fee">Monthly fee</p>
-        <a class="btn btn-line" href="https://wa.me/916383884581?text=Hi%20GEN-NETZ%2C%20I%27d%20like%20to%20ask%20about%20the%20Elite%20plan." target="_blank" rel="noopener">Ask about Elite</a>
+        <a class="btn btn-line" href="https://wa.me/916383884581?text=Hi%20GEN-NETZ%2C%20I%27d%20like%20to%20ask%20about%20the%20Flex%20plan." target="_blank" rel="noopener">Ask about Flex</a>
       </article>
       <article class="plan rec">
-        <span class="badge">Recommended</span>
+        <span class="badge">Most popular</span>
         <h3>Growth</h3>
         <p class="kind">Content plus management</p>
         <p class="for">You send regular HD footage. GEN-NETZ manages the account and adds professional shooting.</p>
@@ -361,35 +362,25 @@ details p{margin:0 0 22px;max-width:64ch}
         <a class="btn btn-solid" href="https://wa.me/916383884581?text=Hi%20GEN-NETZ%2C%20I%27d%20like%20to%20ask%20about%20the%20Growth%20plan." target="_blank" rel="noopener">Ask about Growth</a>
       </article>
       <article class="plan">
-        <h3>Flex</h3>
-        <p class="kind">Flexible management</p>
-        <p class="for">Consistent management with lighter content production.</p>
-        <ul class="vol"><li>Reels <b>3–4 / month</b></li><li>Posts <b>1–2 / month</b></li><li>Stories <b>3–4 / week</b></li></ul>
+        <h3>Elite</h3>
+        <p class="kind">Complete Instagram management</p>
+        <p class="for">GEN-NETZ takes primary responsibility for your Instagram content and management.</p>
+        <ul class="vol"><li>Reels <b>10 / month</b></li><li>Posts <b>4–6 / month</b></li><li>Stories <b>10–12 / month</b></li></ul>
         <p class="fee">Monthly fee</p>
-        <a class="btn btn-line" href="https://wa.me/916383884581?text=Hi%20GEN-NETZ%2C%20I%27d%20like%20to%20ask%20about%20the%20Flex%20plan." target="_blank" rel="noopener">Ask about Flex</a>
+        <a class="btn btn-line" href="https://wa.me/916383884581?text=Hi%20GEN-NETZ%2C%20I%27d%20like%20to%20ask%20about%20the%20Elite%20plan." target="_blank" rel="noopener">Ask about Elite</a>
       </article>
       <article class="plan">
         <h3>Creator</h3>
         <p class="kind">Pay as you go</p>
-        <p class="for">No monthly commitment. Every service is priced on its own, so it’s always clear what you’re paying for.</p>
+        <p class="for">No monthly commitment. Choose the services you need and get a price based on your requirements.</p>
         <div class="creator-pricing">
-          <span class="price-sub">Service pricing</span>
-          <div class="price-headline">Start from 399/-</div>
+          <span class="price-sub">STARTING PRICE</span>
+          <div class="price-hero">
+            <span class="price-title">START FROM</span>
+            <span class="price-amount">399/-</span>
+          </div>
         </div>
-        <ul class="vol creator-services">
-          <li><span>Shooting</span> <b>Start from 399/-</b></li>
-          <li><span>Editing</span> <b>Start from 399/-</b></li>
-          <li><span>Voice over</span> <b>Start from 399/-</b></li>
-          <li><span>Content writing</span> <b>Start from 399/-</b></li>
-          <li>
-            <div class="service-name-wrap">
-              <span>Posting guidance</span>
-              <small>when and how to publish it</small>
-            </div>
-            <b>Start from 399/-</b>
-          </li>
-          <li><span>Combo packages</span> <b>Start from 399/-</b></li>
-        </ul>
+        <p class="creator-desc">Shooting, Editing, Voice Over, Content Writing, Posting Guidance, Combo Services &amp; more.</p>
         <p class="fee">No monthly fee</p>
         <a class="btn btn-line" href="https://wa.me/916383884581?text=Hi%20GEN-NETZ%2C%20I%27d%20like%20to%20ask%20about%20the%20Creator%20plan." target="_blank" rel="noopener">Ask about Creator</a>
       </article>
@@ -397,16 +388,16 @@ details p{margin:0 0 22px;max-width:64ch}
 
     <div class="tablewrap" tabindex="0" role="region" aria-label="Plan comparison table">
       <table>
-        <thead><tr><th scope="col"><span class="sr-only">Feature</span></th><th scope="col">Elite</th><th scope="col">Growth</th><th scope="col">Flex</th><th scope="col">Creator</th></tr></thead>
+        <thead><tr><th scope="col"><span class="sr-only">Feature</span></th><th scope="col">Flex</th><th scope="col">Growth</th><th scope="col">Elite</th><th scope="col">Creator</th></tr></thead>
         <tbody>
-          <tr><th scope="row">Reels</th><td>10 / month</td><td>10 / month</td><td>3–4 / month</td><td>As selected</td></tr>
-          <tr><th scope="row">Posts</th><td>4–6 / month</td><td>4–6 / month</td><td>1–2 / month</td><td>As selected</td></tr>
-          <tr><th scope="row">Stories</th><td>10–12 / month</td><td>10–12 / month</td><td>3–4 / week</td><td>As selected</td></tr>
-          <tr><th scope="row">Who shoots</th><td>GEN-NETZ, on planned visits</td><td>You send HD footage, plus 1–2 GEN-NETZ visits / month</td><td>You send footage, plus 1–2 visits every 2 months</td><td>Visits available at extra charge</td></tr>
-          <tr><th scope="row">Research and strategy</th><td>Account analysis and competitor research</td><td>Included</td><td>Included</td><td>Guidance available</td></tr>
+          <tr><th scope="row">Reels</th><td>5 / month</td><td>10 / month</td><td>10 / month</td><td>As selected</td></tr>
+          <tr><th scope="row">Posts</th><td>2–3 / month</td><td>4–6 / month</td><td>4–6 / month</td><td>As selected</td></tr>
+          <tr><th scope="row">Stories</th><td>11–12 / week</td><td>10–12 / month</td><td>10–12 / month</td><td>As selected</td></tr>
+          <tr><th scope="row">Who shoots</th><td>You send footage, plus 1–2 visits every 2 months</td><td>You send HD footage, plus 1–2 GEN-NETZ visits / month</td><td>GEN-NETZ, on planned visits</td><td>Visits available at extra charge</td></tr>
+          <tr><th scope="row">Research and strategy</th><td>Included</td><td>Included</td><td>Account analysis and competitor research</td><td>Guidance available</td></tr>
           <tr><th scope="row">Editing and publishing</th><td>Included</td><td>Included</td><td>Included</td><td>As selected</td></tr>
-          <tr><th scope="row">Comments and DMs</th><td>Included</td><td>Included</td><td class="dash">—<span class="sr-only">Not included</span></td><td class="dash">—<span class="sr-only">Not included</span></td></tr>
-          <tr><th scope="row">Reports</th><td>Weekly + monthly</td><td>Weekly + monthly</td><td>Monthly</td><td class="dash">—<span class="sr-only">Not included</span></td></tr>
+          <tr><th scope="row">Comments and DMs</th><td class="dash">—<span class="sr-only">Not included</span></td><td>Included</td><td>Included</td><td class="dash">—<span class="sr-only">Not included</span></td></tr>
+          <tr><th scope="row">Reports</th><td>Monthly</td><td>Weekly + monthly</td><td>Weekly + monthly</td><td class="dash">—<span class="sr-only">Not included</span></td></tr>
           <tr><th scope="row">Meta Verified support</th><td>Included</td><td>Included</td><td>Included</td><td class="dash">—<span class="sr-only">Not included</span></td></tr>
           <tr><th scope="row">Fee</th><td>Monthly fee</td><td>Monthly fee</td><td>Monthly fee</td><td>No monthly fee, per-service pricing</td></tr>
         </tbody>
@@ -648,7 +639,7 @@ details p{margin:0 0 22px;max-width:64ch}
       <label>Your name<input name="who" autocomplete="name" required></label>
       <label>Your Instagram handle<input name="handle" placeholder="@yourbrand" required></label>
       <label>Plan you are interested in
-        <select name="plan"><option>Not sure yet</option><option>Elite</option><option>Growth</option><option>Flex</option><option>Creator</option></select>
+        <select name="plan"><option>Not sure yet</option><option>Flex</option><option>Growth</option><option>Elite</option><option>Creator</option></select>
       </label>
       <label>Anything we should know? (optional)<textarea name="msg"></textarea></label>
       <button class="btn btn-solid" type="submit">Send on WhatsApp</button>
