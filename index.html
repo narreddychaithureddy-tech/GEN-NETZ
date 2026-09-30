@@ -115,6 +115,15 @@ h2{font-size:clamp(1.6rem,4.2vw,2.6rem);line-height:1.12;letter-spacing:-.02em;m
 @media (min-width:760px){.row{grid-template-columns:minmax(0,1fr) minmax(0,2fr);padding:28px 0}}
 .aside{margin-top:20px;font-size:.95rem;color:var(--muted);max-width:64ch}
 
+/* service start banner */
+.starting-banner{text-align:center;padding:clamp(28px,5vw,48px) 0 clamp(36px,6vw,56px);display:flex;flex-direction:column;align-items:center}
+.starting-banner .banner-title{font-family:var(--display);font-size:clamp(1.75rem,4.2vw,2.75rem);font-weight:900;letter-spacing:.02em;color:#fff;text-transform:uppercase;margin:0;line-height:1.15}
+.starting-banner .price-wrap{position:relative;display:inline-flex;flex-direction:column;align-items:center;margin-top:clamp(6px,1.5vw,10px)}
+.starting-banner .price-wrap::before{content:"";position:absolute;top:40%;left:50%;transform:translate(-50%,-50%);width:clamp(260px,50vw,440px);height:140px;background:radial-gradient(ellipse at center,rgba(43,145,255,0.28) 0%,rgba(168,97,253,0.14) 45%,transparent 72%);pointer-events:none;z-index:0}
+.starting-banner .price-amount{position:relative;z-index:1;font-family:var(--display);font-size:clamp(3.4rem,8.5vw,5.6rem);font-weight:900;line-height:1;letter-spacing:-.02em;background:linear-gradient(90deg,#2b91ff 0%,#2f88fe 38%,#6071fd 72%,#a861fd 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;display:inline-block}
+.starting-banner .price-flare{position:relative;z-index:1;width:clamp(180px,36vw,290px);height:3px;margin-top:clamp(10px,2vw,16px);background:linear-gradient(90deg,transparent,#2b91ff 20%,#4f75fe 50%,#a861fd 80%,transparent);border-radius:999px;box-shadow:0 0 16px 3px rgba(43,145,255,0.75),0 0 32px 8px rgba(96,113,253,0.4)}
+.starting-banner .price-flare::after{content:"";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:60%;height:1px;background:#fff;opacity:.75}
+
 /* plans */
 .plans{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;align-items:stretch}
 .plan{position:relative;display:flex;flex-direction:column;padding:28px 24px;border:1px solid var(--line);border-radius:12px;background:var(--panel)}
@@ -339,6 +348,13 @@ details p{margin:0 0 22px;max-width:64ch}
 <!-- PLANS -->
 <section class="section" id="plans" style="padding-top:0">
   <div class="wrap">
+    <div class="starting-banner">
+      <div class="banner-title">SERVICE START FROM</div>
+      <div class="price-wrap">
+        <div class="price-amount">₹399/-</div>
+        <div class="price-flare" aria-hidden="true"></div>
+      </div>
+    </div>
     <div class="sh">
       <h2>Four ways to work with GEN-NETZ</h2>
       <p>Start with the level that matches how much you want us to take on. Every plan is billed as a monthly fee, except Creator.</p>
